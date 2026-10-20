@@ -260,7 +260,10 @@ if (form) {
 const veil = document.createElement("div");
 veil.className = "veil";
 document.body.append(veil);
-requestAnimationFrame(() => document.body.classList.add("is-loaded"));
+requestAnimationFrame(() => {
+  document.body.classList.add("is-loaded");
+  document.querySelector(".hero")?.classList.add("is-ready");
+});
 window.addEventListener("pageshow", (e) => { if (e.persisted) document.body.classList.remove("is-leaving"); });
 document.addEventListener("click", (e) => {
   const a = e.target.closest("a");
