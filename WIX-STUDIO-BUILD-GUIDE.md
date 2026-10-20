@@ -69,7 +69,7 @@ There is also a Cancellation / Refund Policy page, linked from the footer and th
 
 | Pattern | How to build it |
 |---|---|
-| Hero blue panel + arch photo | Add a Container shape (Blue, bottom-left radius 36px) docked top-right of the section. Use an Image with radius `999 999 36 36`. The outlined "Salsa / Bachata" text is a Text element with an outline stroke (or an SVG). The badge and chip are Containers. On tablet and mobile, stack the panel behind the photo only. |
+| Hero stage | Section → a Caribbean Blue Container (radius 36px) inset 48px from the top and 64px from the bottom. The arch photo (radius 999 999 36 36, 10px Coconut border) sits in the right column and starts above the blue block, so it breaks out of the top edge. Behind it is a large outlined "Medellín" (Bree Serif, Coconut 2px stroke) clipped by the block. A small circle photo, a Papaya price badge and a "7 nights" chip are layered on the photo. Three info cards (Mango / Coconut / Ink) overlap the bottom edge. A vertical "Salsa · Bachata · 2027" label runs down the right side. Tablet/mobile: copy → photo (outlined text moves above it) → cards in a horizontal swipe row. |
 | Mouse-responsive depth | Animations → Mouse effects → "Track mouse" on the badge, chip, sparks and ghost text. Use different intensities. |
 | Headline word stagger | Text → Entrance animation: "Reveal" or "Slide" set to **by word/line**, about 70ms stagger. |
 | Scroll reveals | Entrance animations: Fade-up (40px, 1s, ease-out), Slide from left/right, and Reveal (clip from bottom) for photos. Stagger repeater/stack items by 0.1s. |
