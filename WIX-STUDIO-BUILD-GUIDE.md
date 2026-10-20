@@ -69,7 +69,7 @@ There is also a Cancellation / Refund Policy page, linked from the footer and th
 
 | Pattern | How to build it |
 |---|---|
-| Hero (name + dancers) | Full-height section on Coconut with two soft Mango/Blue glows. Centered stack: a thin vertical line, "— DANCE IN —" (Figtree 600, 0.32em tracking), a huge "MEDELLÍN" (Bree Serif, about 17vw, with "ME" in Papaya), and "SALSA & BACHATA TRIPS" (Figtree 300, wide tracking). Two transparent dancer cutouts (images/hero-partner-turns.png, mirrored, and hero-partners-connection.png) are docked bottom-left and bottom-right, about 70% of section height, in front of the word. A round Ink "Reserve" button sits bottom-center with a thin line above it. Animations: letters stagger in, the line draws down, dancers rise and fade in, and the dancers and word use Track Mouse at low intensity. Tablet/mobile: the word sits near the top and the dancers fill the lower half. |
+| Hero (name + dancers) | Full-height section on Coconut with two soft Mango/Blue glows. Centered stack: a thin vertical line, "— DANCE IN —" (Figtree 600, 0.32em tracking), a huge "MEDELLÍN" (Bree Serif, about 17vw, with "ME" in Papaya), and "SALSA & BACHATA TRIPS" (Figtree 300, wide tracking). Two transparent dancer cutouts (images/hero-dancer-28434193.png on the left, hero-dancer-28434185.png on the right) are docked bottom-left and bottom-right, about 70% of section height, in front of the word. A round Ink "Reserve" button sits bottom-center with a thin line above it. Animations: letters stagger in, the line draws down, dancers rise and fade in, and the dancers and word use Track Mouse at low intensity. Tablet/mobile: the word sits near the top and the dancers fill the lower half. |
 | Mouse-responsive depth | Animations → Mouse effects → "Track mouse" on the badge, chip, sparks and ghost text. Use different intensities. |
 | Headline word stagger | Text → Entrance animation: "Reveal" or "Slide" set to **by word/line**, about 70ms stagger. |
 | Scroll reveals | Entrance animations: Fade-up (40px, 1s, ease-out), Slide from left/right, and Reveal (clip from bottom) for photos. Stagger repeater/stack items by 0.1s. |
@@ -92,7 +92,7 @@ There is also a Cancellation / Refund Policy page, linked from the footer and th
 ## 4. Image map (`images/`)
 | Page / section | Image |
 |---|---|
-| Home hero | Cutouts made from partner-turns and partners-connection: images/hero-partner-turns.(webp/png), images/hero-partners-connection.(webp/png) |
+| Home hero | Free-licence Pexels photos with backgrounds removed: images/hero-dancer-28434193.(webp/png) from pexels.com/photo/28434193 and images/hero-dancer-28434185.(webp/png) from pexels.com/photo/28434185. The Pexels License allows free commercial use with no attribution required. |
 | Home "week feels like" | partner-turns, street-food, group-dinner |
 | Home "why different" | nina, group-salsa-social, partners-connection, cooking-class |
 | Home gallery | three-guests-venue, nueva-guardia-group, ice-pops, woman-dancing-partner, market-pineapple, partners-smiling, group-class-siembrala, coffee-tour |

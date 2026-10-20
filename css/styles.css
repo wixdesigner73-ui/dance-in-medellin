@@ -346,11 +346,12 @@ p:last-child { margin-bottom: 0; }
 
 .hero__dancer {
   position: absolute; z-index: 2; bottom: 0; width: auto; max-width: none;
-  filter: drop-shadow(0 30px 40px rgba(38, 62, 70, .28));
+  filter: drop-shadow(0 24px 30px rgba(38, 62, 70, .22)) drop-shadow(0 2px 4px rgba(38, 62, 70, .12));
   pointer-events: none; user-select: none;
 }
-.hero__dancer--l { height: 70%; left: 0; scale: -1 1; } /* mirrored so the photo's cropped edge sits on the screen edge */
-.hero__dancer--r { height: 68%; right: 0; }
+/* Free-licence Pexels photos (pexels.com/photo/28434193, /28434185), backgrounds removed */
+.hero__dancer--l { height: 80%; left: max(0px, calc(50% - 720px)); bottom: 4%; }
+.hero__dancer--r { height: 82%; right: max(0px, calc(50% - 720px)); bottom: 4%; }
 
 .hero__note { display: none;
   position: absolute; z-index: 4; left: max(var(--gutter), calc(50% - 600px)); bottom: clamp(36px, 7vh, 72px);
@@ -379,8 +380,8 @@ p:last-child { margin-bottom: 0; }
   .hero { height: clamp(640px, 92svh, 900px); }
   .hero__lockup { top: 34%; }
   .hero__word { font-size: 18.5vw; }
-  .hero__dancer--l { height: 52%; }
-  .hero__dancer--r { height: 50%; }
+  .hero__dancer--l { height: 56%; left: -2%; }
+  .hero__dancer--r { height: 58%; right: -2%; }
   .hero__note { display: none; }
 }
 
@@ -393,8 +394,8 @@ p:last-child { margin-bottom: 0; }
   .hero__pre::before { width: 22px; }
   .hero__word { font-size: 19.5vw; }
   .hero__sub { font-size: .82rem; letter-spacing: .24em; }
-  .hero__dancer--l { height: 54%; left: -4%; }
-  .hero__dancer--r { height: 52%; right: -6%; }
+  .hero__dancer--l { height: 52%; left: -8%; bottom: 3%; }
+  .hero__dancer--r { height: 54%; right: -10%; bottom: 3%; }
   .hero__cta { bottom: 26px; }
   .hero__cta::before { display: none; }
   .hero__join { width: 80px; height: 80px; font-size: .7rem; }
