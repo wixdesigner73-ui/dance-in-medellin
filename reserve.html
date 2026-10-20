@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reserve Your Spot | Dance in Medellín</title>
+  <meta name="description" content="Interested in dancing with us in Medellín? This quick, no-obligation interest form takes about 2 minutes. No payment required.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="reserve">
+<main id="main">
+
+  <section class="page-hero" style="padding-bottom:calc(var(--section)*.45)">
+    <span class="spark" style="--s:36px;--c:var(--papaya);top:28%;right:10%"></span>
+    <span class="spark spark--b" style="--s:22px;--c:var(--blue);top:58%;right:24%"></span>
+    <div class="container">
+      <p class="eyebrow" data-reveal>Reserve Your Spot · No-obligation interest form</p>
+      <h1 data-split style="font-size:clamp(2.8rem,6.5vw,6rem);max-width:15ch">Interested in dancing with us in Medellín?</h1>
+      <p class="lead measure" data-reveal style="--d:.35s">Tell me a little about yourself and which trip interests you. This quick form takes about 2 minutes.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container reserve__grid">
+
+      <!-- ===== Option 1: interest form (rebuild with Wix Forms) ===== -->
+      <div class="form-card" data-reveal>
+        <p class="eyebrow">Option 1: Tell me you're interested</p>
+        <form id="interest-form" novalidate>
+          <fieldset class="field" data-required>
+            <legend>What’s your name?</legend>
+            <div class="field-row">
+              <div class="field" style="margin:0"><label class="hint" for="fname" style="font-weight:600;margin:0">First name</label><input class="input" id="fname" name="first_name" autocomplete="given-name" required></div>
+              <div class="field" style="margin:0"><label class="hint" for="lname" style="font-weight:600;margin:0">Last name</label><input class="input" id="lname" name="last_name" autocomplete="family-name" required></div>
+            </div>
+            <span class="err">Please add your first and last name.</span>
+          </fieldset>
+
+          <div class="field" data-required>
+            <label for="email">What’s the best email for you?</label>
+            <input class="input" type="email" id="email" name="email" autocomplete="email" required>
+            <span class="err">Please enter a valid email address.</span>
+          </div>
+
+          <div class="field">
+            <label for="phone">WhatsApp number (optional)</label>
+            <p class="hint" id="phone-hint">If you'd rather talk here than by email, include your country code.</p>
+            <input class="input" type="tel" id="phone" name="whatsapp" autocomplete="tel" aria-describedby="phone-hint">
+          </div>
+
+          <div class="field">
+            <label for="based">Where are you based?</label>
+            <p class="hint" id="based-hint">City + country is perfect.</p>
+            <input class="input" id="based" name="location" aria-describedby="based-hint">
+          </div>
+
+          <fieldset class="field">
+            <legend>How did you hear about Dance in Medellín?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="source" value="Instagram"><span>Instagram</span></label>
+              <label class="choice"><input type="radio" name="source" value="Google search"><span>Google search</span></label>
+              <label class="choice"><input type="radio" name="source" value="Friend or personal referral"><span>Friend or personal referral</span></label>
+              <label class="choice"><input type="radio" name="source" value="Past participant"><span>Past participant</span></label>
+              <label class="choice"><input type="radio" name="source" value="Dance instructor or school"><span>Dance instructor or school</span></label>
+              <label class="choice"><input type="radio" name="source" value="Dance social / event"><span>Dance social / event</span></label>
+              <label class="choice"><input type="radio" name="source" value="Other"><span>Other</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field" data-required="group">
+            <legend>Which trip are you interested in?</legend>
+            <div class="choices choices--stack">
+              <label class="choice"><input type="radio" name="trip" value="Bachata Immersion - April 11, 2027"><span>Bachata Immersion - April 11, 2027</span></label>
+              <label class="choice"><input type="radio" name="trip" value="Salsa Immersion - April 25, 2027"><span>Salsa Immersion - April 25, 2027</span></label>
+              <label class="choice"><input type="radio" name="trip" value="Specific date"><span>I’m considering a trip for a specific date</span></label>
+              <label class="choice"><input type="radio" name="trip" value="Flexible"><span>My dates are flexible</span></label>
+            </div>
+            <span class="err">Please choose a trip option.</span>
+          </fieldset>
+
+          <fieldset class="field" data-required="group">
+            <legend>How would you describe your current dance level?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="level" value="Brand new / just getting started"><span>Brand new / just getting started</span></label>
+              <label class="choice"><input type="radio" name="level" value="Beginner"><span>Beginner</span></label>
+              <label class="choice"><input type="radio" name="level" value="Beginner-intermediate"><span>Beginner-intermediate</span></label>
+              <label class="choice"><input type="radio" name="level" value="Intermediate"><span>Intermediate</span></label>
+              <label class="choice"><input type="radio" name="level" value="Intermediate-advanced"><span>Intermediate-advanced</span></label>
+              <label class="choice"><input type="radio" name="level" value="Advanced"><span>Advanced</span></label>
+            </div>
+            <span class="err">Please choose your dance level.</span>
+          </fieldset>
+
+          <div class="field">
+            <label for="hopes">What are you hoping to get out of the immersion?</label>
+            <p class="hint" id="hopes-hint">No essay required — a sentence or two is plenty.</p>
+            <textarea class="input" id="hopes" name="hopes" aria-describedby="hopes-hint" style="min-height:90px"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="else">Anything else you’d like me to know? <span class="muted" style="font-weight:500">(optional)</span></label>
+            <textarea class="input" id="else" name="notes" style="min-height:90px"></textarea>
+          </div>
+
+          <fieldset class="field" data-required>
+            <legend style="margin-bottom:.8rem">Before you submit</legend>
+            <label class="checkline"><input type="checkbox" name="ack_type" required><span>I understand this is a small-group dance and cultural immersion, not a party tour or nonstop dance bootcamp.</span></label>
+            <label class="checkline"><input type="checkbox" name="ack_payment" required><span>I understand this form does not require payment or hold a spot.</span></label>
+            <span class="err">Please tick both boxes to continue.</span>
+          </fieldset>
+
+          <button class="btn" type="submit">Send My Interest Form <span class="arrow">→</span></button>
+          <p class="cta-note" style="margin-top:.9rem">No payment, obligation, or reserved spot comes with submitting the form.</p>
+        </form>
+
+        <div class="form-success" role="status" aria-live="polite">
+          <p class="eyebrow" style="justify-content:center">Confirmation</p>
+          <h2>Got it! 🎉</h2>
+          <p class="lead">Thanks for getting in touch!</p>
+          <p class="measure" style="margin-inline:auto">I'll personally review your answers and follow up with the relevant trip details and next steps within 48-72 hours.</p>
+          <p class="measure" style="margin-inline:auto">Once trip details are confirmed, you'll be able to decide whether you'd like to book. If you have questions—or just want to say hello—we can schedule a short call.</p>
+          <a class="btn btn--ghost" data-contact="calendar" href="#" style="margin-top:1rem">Schedule a 20-minute call</a>
+        </div>
+      </div>
+
+      <!-- ===== Side column ===== -->
+      <aside class="sticky-side">
+        <div class="side-card bg-mango" data-reveal>
+          <h3>No payment, obligation, or reserved spot comes with submitting the form.</h3>
+          <p>I'll personally follow up with availability and the next steps if you'd like to reserve a spot. A call is always optional.</p>
+        </div>
+
+        <div class="side-card bg-blue" id="call" data-reveal style="--d:.1s">
+          <p class="eyebrow">Option 2: Talk before you register</p>
+          <h3>Want to talk it through?</h3>
+          <p>If you’d rather chat before registering, you can choose a time directly from my calendar.</p>
+          <p>There’s no sales pitch and no pressure to commit. Bring whatever questions you have.</p>
+          <a class="btn btn--sm" data-contact="calendar" href="#">Schedule a 20-minute call</a>
+          <p class="muted" style="font-size:.82rem;margin-top:.8rem;color:var(--ink-80)">Dance in Medellín — Ask Nina Anything</p>
+        </div>
+
+        <div class="side-card bg-ink" id="connect" data-reveal style="--d:.2s">
+          <p class="eyebrow" style="color:var(--mango)">Other ways to connect</p>
+          <h3>Have a question?</h3>
+          <p>Send me a message and I’ll get back to you.</p>
+          <a class="btn btn--light btn--sm" data-contact="whatsapp" href="#">WhatsApp Nina</a>
+          <hr style="border:0;border-top:1px solid rgba(255,244,231,.2);margin:1.8rem 0">
+          <h3 id="participant">Talk to a past participant</h3>
+          <p>A few past participants have volunteered to answer questions from people considering a future immersion. If you’d like, I can make an introduction.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>
