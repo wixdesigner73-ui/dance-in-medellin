@@ -66,7 +66,11 @@
               <label class="choice"><input type="radio" name="source" value="Past participant"><span>Past participant</span></label>
               <label class="choice"><input type="radio" name="source" value="Dance instructor or school"><span>Dance instructor or school</span></label>
               <label class="choice"><input type="radio" name="source" value="Dance social / event"><span>Dance social / event</span></label>
-              <label class="choice"><input type="radio" name="source" value="Other"><span>Other</span></label>
+              <label class="choice"><input type="radio" name="source" value="Other" data-shows="source-other"><span>Other</span></label>
+            </div>
+            <div class="follow-up" id="source-other">
+              <label class="hint" for="source-other-text">Where did you hear about us?</label>
+              <input class="input" id="source-other-text" name="source_other">
             </div>
           </fieldset>
 
@@ -75,8 +79,12 @@
             <div class="choices choices--stack">
               <label class="choice"><input type="radio" name="trip" value="Bachata Immersion - April 11, 2027"><span>Bachata Immersion - April 11, 2027</span></label>
               <label class="choice"><input type="radio" name="trip" value="Salsa Immersion - April 25, 2027"><span>Salsa Immersion - April 25, 2027</span></label>
-              <label class="choice"><input type="radio" name="trip" value="Specific date"><span>I’m considering a trip for a specific date</span></label>
+              <label class="choice"><input type="radio" name="trip" value="Specific date" data-shows="trip-date"><span>I’m considering a trip for a specific date</span></label>
               <label class="choice"><input type="radio" name="trip" value="Flexible"><span>My dates are flexible</span></label>
+            </div>
+            <div class="follow-up" id="trip-date">
+              <label class="hint" for="trip-date-text">Which date(s) are you considering?</label>
+              <input class="input" id="trip-date-text" name="trip_date">
             </div>
             <span class="err">Please choose a trip option.</span>
           </fieldset>
@@ -92,6 +100,42 @@
               <label class="choice"><input type="radio" name="level" value="Advanced"><span>Advanced</span></label>
             </div>
             <span class="err">Please choose your dance level.</span>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>Have you traveled internationally for dance before?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="dance_travel" value="Yes"><span>Yes</span></label>
+              <label class="choice"><input type="radio" name="dance_travel" value="No"><span>No</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>Have you been to Colombia before?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="been_colombia" value="Yes"><span>Yes</span></label>
+              <label class="choice"><input type="radio" name="been_colombia" value="No"><span>No</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>Have you been to Medellín before?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="been_medellin" value="Yes"><span>Yes</span></label>
+              <label class="choice"><input type="radio" name="been_medellin" value="No"><span>No</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>Is there anything that makes you hesitant about traveling to Medellín?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="hesitant" value="Yes" data-shows="hesitant-why"><span>Yes</span></label>
+              <label class="choice"><input type="radio" name="hesitant" value="No"><span>No</span></label>
+            </div>
+            <div class="follow-up" id="hesitant-why">
+              <label class="hint" for="hesitant-text">What’s on your mind?</label>
+              <textarea class="input" id="hesitant-text" name="hesitant_details" style="min-height:90px"></textarea>
+            </div>
           </fieldset>
 
           <div class="field">
@@ -130,7 +174,7 @@
       <aside class="sticky-side">
         <div class="side-card bg-mango" data-reveal>
           <h3>No payment, obligation, or reserved spot comes with submitting the form.</h3>
-          <p>I'll personally follow up with availability and the next steps if you'd like to reserve a spot. A call is always optional.</p>
+          <p>I'll personally follow up within 48-72 hours with confirmed trip information, answers to your questions, and details for reserving a spot. A call is optional. You decide whether to book; your spot is confirmed only after your $500 deposit is received.</p>
         </div>
 
         <div class="side-card bg-blue" id="call" data-reveal style="--d:.1s">
@@ -147,6 +191,7 @@
           <h3>Have a question?</h3>
           <p>Send me a message and I’ll get back to you.</p>
           <a class="btn btn--light btn--sm" data-contact="whatsapp" href="#">WhatsApp Nina</a>
+          <a class="btn btn--light btn--sm" data-contact="email" href="#">Email Nina</a>
           <hr style="border:0;border-top:1px solid rgba(255,244,231,.2);margin:1.8rem 0">
           <h3 id="participant">Talk to a past participant</h3>
           <p>A few past participants have volunteered to answer questions from people considering a future immersion. If you’d like, I can make an introduction.</p>

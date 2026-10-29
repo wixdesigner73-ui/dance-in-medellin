@@ -1,12 +1,12 @@
 /* Dance in Medellín — shared interactions
    Each effect maps to a native Wix Studio feature (see WIX-STUDIO-BUILD-GUIDE.md). */
 
-/* ---- Client contact details: NOT PROVIDED YET — fill these in before launch ---- */
+/* ---- Client contact details (calendar link still to come) ---- */
 const CONTACT = {
-  whatsappNumber: "",   // international format, digits only, e.g. "573001234567"
-  calendarUrl: "",      // booking link for "Dance in Medellín — Ask Nina Anything" (20 min)
-  instagramUrl: "",     // Dance in Medellín Instagram profile
-  email: ""             // contact email
+  whatsapp: "nina_joven", // wa.me username
+  calendarUrl: "",        // NOT PROVIDED YET: booking link for "Dance in Medellín — Ask Nina Anything" (20 min)
+  instagramUrl: "https://www.instagram.com/danceinmedellin/",
+  email: "danceinmedellinco@gmail.com"
 };
 const WA_MESSAGE = "Hi Nina! I’m interested in a Dance in Medellín trip and had a question about an upcoming immersion 🙂";
 
@@ -67,13 +67,7 @@ const setMenu = (open) => {
 burger.addEventListener("click", () => setMenu(!document.body.classList.contains("menu-open")));
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 
-let lastY = 0;
-const onScroll = () => {
-  const y = window.scrollY;
-  header.classList.toggle("is-scrolled", y > 20);
-  header.classList.toggle("is-hidden", y > 500 && y > lastY && !document.body.classList.contains("menu-open"));
-  lastY = y;
-};
+const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 20);
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
@@ -82,10 +76,6 @@ const footer = document.createElement("footer");
 footer.className = "site-footer";
 footer.innerHTML = `
   <div class="container">
-    <div class="footer__mission">
-      <p class="eyebrow">At the heart of this experience</p>
-      <p>My mission is to use dance as a bridge to uplift local artists in Medellín through above-market compensation and economic dignity, while connecting international participants to personal growth and a deeper appreciation for Colombian culture.</p>
-    </div>
     <div class="footer__grid">
       <div class="cta-block">
         <h4>Ready when you are</h4>
@@ -96,7 +86,7 @@ footer.innerHTML = `
       <div><h4>Connect</h4><ul>
         <li><a data-contact="instagram" href="#">Instagram</a></li>
         <li><a data-contact="whatsapp" href="#">WhatsApp</a></li>
-        <li><a href="reserve.html#connect">Contact</a></li>
+        <li><a data-contact="email" href="#">Contact</a></li>
       </ul></div>
       <div><h4>Legal</h4><ul>
         <li><a href="#" title="Privacy Policy not provided yet">Privacy Policy</a></li>
@@ -107,14 +97,13 @@ footer.innerHTML = `
     <div class="footer__big" aria-hidden="true">Dance in <span>Medellín</span></div>
     <div class="footer__legal"><span>© ${new Date().getFullYear()} Dance in Medellín</span><span>Move. Connect. Belong.</span></div>
   </div>`;
-if (page === "about") footer.querySelector(".footer__mission").remove(); // mission already has its own section there
 document.body.append(footer);
 
 /* ---------- Contact links (fall back to the contact section until real details exist) ---------- */
 document.querySelectorAll("[data-contact]").forEach((a) => {
   const type = a.dataset.contact;
   let href = "";
-  if (type === "whatsapp" && CONTACT.whatsappNumber) href = `https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(WA_MESSAGE)}`;
+  if (type === "whatsapp" && CONTACT.whatsapp) href = `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(WA_MESSAGE)}`;
   if (type === "calendar" && CONTACT.calendarUrl) href = CONTACT.calendarUrl;
   if (type === "instagram" && CONTACT.instagramUrl) href = CONTACT.instagramUrl;
   if (type === "email" && CONTACT.email) href = `mailto:${CONTACT.email}`;
@@ -148,7 +137,7 @@ document.querySelectorAll("[data-split]").forEach((el) => {
 });
 
 /* ---------- Scroll reveals ---------- */
-const revealTargets = document.querySelectorAll("[data-reveal], .split, .mark, [data-stagger] > *");
+const revealTargets = document.querySelectorAll("[data-reveal], .split, [data-stagger] > *");
 document.querySelectorAll("[data-stagger]").forEach((group) => {
   const step = parseFloat(group.dataset.stagger) || 0.1;
   [...group.children].forEach((c, i) => { if (!c.hasAttribute("data-reveal")) c.setAttribute("data-reveal", ""); c.style.setProperty("--d", `${i * step}s`); });
@@ -157,7 +146,7 @@ if ("IntersectionObserver" in window && !reduceMotion) {
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
   }, { rootMargin: "0px 0px -10% 0px", threshold: 0.12 });
-  document.querySelectorAll("[data-reveal], .split, .mark").forEach((el) => io.observe(el));
+  document.querySelectorAll("[data-reveal], .split").forEach((el) => io.observe(el));
 } else {
   revealTargets.forEach((el) => el.classList.add("is-in"));
   document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("is-in"));
@@ -239,6 +228,10 @@ if (form) {
     });
     return firstBad;
   };
+  // Choices with data-shows="<id>" open a follow-up text box (Wix Forms: conditional field)
+  const syncFollowUps = () => form.querySelectorAll("[data-shows]").forEach((r) => { form.querySelector(`#${r.dataset.shows}`).hidden = !r.checked; });
+  form.addEventListener("change", (e) => { if (e.target.type === "radio") syncFollowUps(); });
+  syncFollowUps();
   const recheck = () => { if (form.querySelector(".has-err")) validate(); };
   form.addEventListener("input", recheck);
   form.addEventListener("change", recheck);
