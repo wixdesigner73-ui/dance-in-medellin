@@ -268,3 +268,11 @@ document.addEventListener("click", (e) => {
   document.body.classList.add("is-leaving");
   setTimeout(() => { window.location.href = href; }, 320);
 });
+
+/* ---------- Looping background videos: honour reduced motion, pause when off-screen ---------- */
+const loops = document.querySelectorAll("video[autoplay]");
+if (reduceMotion) loops.forEach((v) => { v.removeAttribute("autoplay"); v.pause(); v.controls = true; });
+else if ("IntersectionObserver" in window) {
+  const vio = new IntersectionObserver((entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.play().catch(() => {}); else e.target.pause(); }), { threshold: 0.15 });
+  loops.forEach((v) => vio.observe(v));
+}

@@ -47,13 +47,21 @@
     </div>
   </section>
 
-  <!-- ============ VIDEO (placeholder) ============ -->
-  <section class="section--tight">
-    <div class="container">
-      <div class="placeholder placeholder--video" data-reveal="scale" role="img" aria-label="Video placeholder: About Me video not recorded yet">
-        <div class="play" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24"><path fill="#263E46" d="M8 5.5v13l11-6.5z"/></svg></div>
-        <strong>About Me video — coming soon</strong>
-        <span>Placeholder: client video hasn’t been recorded yet. Replace with the Wix Video Player.</span>
+  <!-- ============ ABOUT ME VIDEO (Wix: Video Player, vertical 9:16) ============ -->
+  <section class="section about-video">
+    <span class="spark" style="--s:30px;--c:var(--mango);top:10%;left:8%"></span>
+    <div class="container about-video__grid">
+      <div class="about-video__side">
+        <div class="zoom" data-reveal="clip"><img src="images/nina-olaf-umbrellas.jpg" alt="Nina and Olaf on a Medellín street under colorful hanging umbrellas" loading="lazy"></div>
+      </div>
+      <figure class="about-video__player" data-reveal="scale">
+        <video controls playsinline preload="none" poster="videos/about-nina-poster.jpg" aria-label="About Me video: Nina talks about Medellín and why she created Dance in Medellín">
+          <source src="videos/about-nina.mp4" type="video/mp4">
+        </video>
+      </figure>
+      <div class="about-video__side about-video__side--stack">
+        <div class="zoom" data-reveal="clip" style="--d:.1s"><img src="images/medellin-night-hills.jpg" alt="Medellín’s hillside lights at dusk" loading="lazy"></div>
+        <div class="zoom" data-reveal="clip" style="--d:.2s"><img src="images/medellin-skyline-mountains.jpg" alt="Medellín skyline in front of green mountains" loading="lazy"></div>
       </div>
     </div>
   </section>

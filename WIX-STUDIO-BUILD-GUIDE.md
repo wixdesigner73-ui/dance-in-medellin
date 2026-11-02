@@ -58,7 +58,7 @@ There is also a Cancellation / Refund Policy page, linked from the footer and th
 | index.html | Home | Hero → marquee → intro + glimpse of the week + price → what the week feels like → why different → testimonials → gallery → upcoming trips → Hi, I'm Nina → Still undecided (dark) |
 | experience.html | The Experience | Hero → private lessons → dance floor → beyond the studio → **sample week calendar** → where you'll stay (slider + 2 suite cards) → included / not included → dates & pricing → who loves it → how joining works (dark) |
 | stories.html | Participant Stories | Hero + wide photo → Dimple / Aaron / Carena stories in alternating layouts → photo strip → CTA |
-| about.html | About | Nina hero → why it matters + quote → **video placeholder** → local partners (Siémbrala) → mission (dark) |
+| about.html | About | Nina hero → why it matters + quote → **About Me video + Medellín photos** → local partners (Siémbrala) → mission (dark) |
 | faq.html | FAQ | 8 categories with a sticky category menu and accordions |
 | reserve.html | Reserve Your Spot | Interest form + confirmation, call option, other ways to connect |
 | policy.html | Cancellation / Refund Policy | Policy text |
@@ -90,24 +90,42 @@ There is also a Cancellation / Refund Policy page, linked from the footer and th
 
 ---
 
-## 4. Image map (`images/`)
-| Page / section | Image |
-|---|---|
-| Home hero | Free-licence Pexels photos with backgrounds removed: images/hero-dancer-28434193.(webp/png) from pexels.com/photo/28434193 and images/hero-dancer-28434185.(webp/png) from pexels.com/photo/28434185. The Pexels License allows free commercial use with no attribution required. |
-| Home "week feels like" | partner-turns, street-food, group-dinner |
-| Home "why different" | nina, group-salsa-social, partners-connection, cooking-class |
-| Home gallery | three-guests-venue, nueva-guardia-group, ice-pops, woman-dancing-partner, market-pineapple, partners-smiling, group-class-siembrala, coffee-tour |
-| Experience | group-class-siembrala, market-pineapple, partners-connection, partner-turns, woman-local-dancer, partners-smiling, cooking-class, ice-pops, street-food, group-dinner + all hotel-* / suite-* photos |
-| Stories | Dimple = coffee-tour ⚠️, Aaron = guest-red-door, Carena = woman-hats-street, hero = nueva-guardia-group |
-| About | nina, carlos-aleja |
+## 4. Image & video map (`images/`, `videos/`)
+**Rule: every photo is used once across the whole site — no repeats.** Unused photos stay in `images/` for future pages or social posts.
 
-hotel-lobby-triptych wasn't used because it repeats the lobby and reception shots.
+| Page / section | Media |
+|---|---|
+| Home hero | Text only (dancer cutouts removed per client feedback, 29 Oct). The Pexels cutouts (hero-dancer-*) remain in images/ in case they're wanted later. |
+| Home "week feels like" | partner-turns, street-food, group-dinner |
+| Home "why different" | nina-olaf-viewpoint, group-salsa-social, partners-connection, cooking-class |
+| Home gallery | social-dancer-spin, social-floor-wide, **video** couple-close-loop, social-couple-close, umbrella-street, **video** rooftop-social-loop, social-dip, social-group-dancing |
+| Home trip cards | Bachata: social-couple-turn · Salsa: couple-salsa-social |
+| Home "Hi, I'm Nina" | nina-olaf-pueblito-paisa |
+| Experience hero | group-class-siembrala + market-pineapple (circle) |
+| Experience private lessons | woman-local-dancer, social-turn-bar |
+| Experience dance floor | **video** social-floor-loop, partners-smiling |
+| Experience beyond the studio | group-cooking-hosts, ice-pops, group-market-visit |
+| Experience hotel + suites | all hotel-* / suite-* photos |
+| Experience dates cards | Bachata: social-floor-lines · Salsa: social-couple-laughing |
+| Experience "who loves this" | group-outdoors-laughing |
+| Stories | hero nueva-guardia-group · Dimple = coffee-tour ⚠️ · Aaron = guest-red-door · Carena = woman-hats-street · strip: three-guests-venue, social-group-smiles, woman-dancing-partner, **video** medellin-sign-couple-loop |
+| About | hero nina · **About Me video** about-nina.mp4, framed by nina-olaf-umbrellas, medellin-night-hills, medellin-skyline-mountains · carlos-aleja |
+
+**Videos in Wix Studio:**
+- **Looping clips** (`*-loop.mp4`): add as Video Box elements set to autoplay, loop and muted, with no controls. Each one is silent, 7–12 seconds and 1.5–2.8 MB. Use the matching `-poster.jpg` as the cover image.
+- **about-nina.mp4:** Video Player element with sound and play controls, vertical 9:16, cover image about-nina-poster.jpg.
+- **Reduced motion:** the reference site pauses the loops and shows controls for visitors with "reduce motion" turned on.
+
+**Not used yet:**
+- Two more social-floor clips (PXL_20260813_031131200, PXL_20260815_042317417).
+- Photos: medellin-night-panorama, medellin-hills-panorama, medellin-dusk, medellin-valley, medellin-green-city, medellin-sunset-trees, comuna-13-houses, colorful-street, botero-mural, yo-medellin-sign, social-crowd-lamps, social-friends-pose, olaf-* (Olaf solo shots), hotel-lobby-triptych.
+- Several of these (comuna-13-houses, colorful-street, botero-mural, medellin-skyline-mountains, medellin-dusk, medellin-green-city) are Unsplash photos the client supplied. The Unsplash License allows free commercial use.
 
 ---
 
 ## 5. Open items — need client input before launch
 1. **Logo:** still in progress. The header uses a text placeholder in Bree Serif ("DANCE IN / Medellín", accent kept).
-2. **About Me video:** not recorded yet. A clearly labeled placeholder is on the About page.
+2. **About Me video:** ✅ received (2 Nov) and live on the About page as videos/about-nina.mp4.
 3. **Contact details:** WhatsApp (wa.me/nina_joven), Instagram (instagram.com/danceinmedellin) and email (danceinmedellinco@gmail.com) are set in the `CONTACT` block of `js/main.js`. **Calendar link still missing**, so "Book a call" links jump to the contact section.
 4. **Privacy Policy and Terms:** no copy provided. The footer links are placeholders.
 5. **Dimple's photo:** the client asked for "Dimple with sunglasses". I used `coffee-tour`, the closest match, so please confirm.
