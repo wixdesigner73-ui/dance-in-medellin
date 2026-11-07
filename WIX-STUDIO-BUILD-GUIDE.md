@@ -138,3 +138,35 @@ There is also a Cancellation / Refund Policy page, linked from the footer and th
    - "What’s not included" list: the client says it needs changing, but the copy doc still shows the old list. Waiting on the new list.
    - The "[Test the actual form…]" note was removed. The FAQ says "About 2 minutes."
 8. **Doc's internal checklist:** dates, $2,199 / $2,399 pricing, the $500 deposit, and permission for Ellen's quote and all guest quotes and photos all need confirming before launch.
+
+---
+
+## 6. Revisions — 3 Nov client feedback + task list
+
+**Done in the reference build**
+- **Form:** every field is required except WhatsApp and "Anything else you'd like me to know?". Choosing "I'm considering a trip for another date" reveals **"What dates are you considering?"**, which is required while visible. The same rule applies to "Other" (how did you hear) and "Yes" (hesitant).
+- **Sticky contact:** WhatsApp / Instagram / Email icons sit left of the "Reserve Your Spot" button in the desktop nav. On tablet/mobile a bar pinned to the bottom of the screen carries the same icons plus the Reserve button. Because of that, the bottom-of-page CTA bands and "Questions? Talk to Nina" were removed from Experience, Guest Stories, About and FAQ (the footer CTA stays).
+- **Calendly:** `https://calendly.com/danceinmedellin/letschat` is set in `CONTACT.calendarUrl` and opens as a popup, with a new-tab fallback. All "Book a call" buttons use it.
+- **FAQ:** the category menu is gone, so every category scrolls in one list of accordions.
+- **Spacing fixes:** What's included / not included boxes now align, the stacked amenity pills wrap in a row on mobile, and the large blank gap above the Experience "Reserve" button is gone with that button.
+- **Footer credit:** "Website created by a human at Webloom Studio" links to webloomstudio.com.
+
+**Wix-only (can't be shown in this static build)**
+- **Wix Contacts (CRM):** Forms → Settings → Submissions → "Create/update contact". Map name, email and WhatsApp to the contact fields.
+- **Notification to Nina:** Form → Notifications → send to danceinmedellinco@gmail.com.
+- **Auto-confirmation email** (Wix Automations or the form's "Send email to submitter"). Subject suggestion: "Thanks for getting in touch". Body, as approved by Nina:
+  > Hi [[Name]],
+  > Thanks for getting in touch!
+  > I'll personally review your answers and follow up with the relevant trip details and next steps within 48-72 hours.
+  > Once trip details are confirmed, you'll be able to decide whether you'd like to book.
+  > If you have questions or just want to say hello, we can schedule a short call.
+  > Warmest regards,
+  > Nina
+- **Form on Wix:** Wix's required toggle per field, plus a conditional-logic rule on the date question.
+- **Stuck right column covering the nav:** raise the header layer above the form's sticky column, or drop the sticky behaviour on that column.
+- **Mobile sticky bar in Wix:** a container pinned to the bottom of the viewport, shown on the mobile breakpoint only (Wix Studio: Position → Fixed, bottom).
+- **Calendly in Wix:** use the Calendly popup via an Embed element or a button link to the URL above.
+
+**Open**
+- **Guest Stories cocktail-glasses animation:** it exists only in the live Wix site, not in this build. Options to show the client are listed in the hand-off notes. Nothing was replaced.
+- **Floating bottom-right button:** the task list suggested it, but the client's 3 Nov email asks for icons beside Reserve plus a mobile sticky bar. I built that version. Confirm before also adding a bottom-right floater.

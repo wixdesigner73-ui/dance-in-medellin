@@ -51,13 +51,14 @@
             <input class="input" type="tel" id="phone" name="whatsapp" autocomplete="tel" aria-describedby="phone-hint">
           </div>
 
-          <div class="field">
+          <div class="field" data-required>
             <label for="based">Where are you based?</label>
             <p class="hint" id="based-hint">City + country is perfect.</p>
-            <input class="input" id="based" name="location" aria-describedby="based-hint">
+            <input class="input" id="based" name="location" aria-describedby="based-hint" required>
+            <span class="err">Please tell me where you’re based.</span>
           </div>
 
-          <fieldset class="field">
+          <fieldset class="field" data-required="group">
             <legend>How did you hear about Dance in Medellín?</legend>
             <div class="choices">
               <label class="choice"><input type="radio" name="source" value="Instagram"><span>Instagram</span></label>
@@ -72,6 +73,7 @@
               <label class="hint" for="source-other-text">Where did you hear about us?</label>
               <input class="input" id="source-other-text" name="source_other">
             </div>
+            <span class="err">Please choose an option (and tell me where, if “Other”).</span>
           </fieldset>
 
           <fieldset class="field" data-required="group">
@@ -79,14 +81,14 @@
             <div class="choices choices--stack">
               <label class="choice"><input type="radio" name="trip" value="Bachata Immersion - April 11, 2027"><span>Bachata Immersion - April 11, 2027</span></label>
               <label class="choice"><input type="radio" name="trip" value="Salsa Immersion - April 25, 2027"><span>Salsa Immersion - April 25, 2027</span></label>
-              <label class="choice"><input type="radio" name="trip" value="Specific date" data-shows="trip-date"><span>I’m considering a trip for a specific date</span></label>
+              <label class="choice"><input type="radio" name="trip" value="Specific date" data-shows="trip-date"><span>I’m considering a trip for another date</span></label>
               <label class="choice"><input type="radio" name="trip" value="Flexible"><span>My dates are flexible</span></label>
             </div>
             <div class="follow-up" id="trip-date">
-              <label class="hint" for="trip-date-text">Which date(s) are you considering?</label>
+              <label class="hint" for="trip-date-text">What dates are you considering?</label>
               <input class="input" id="trip-date-text" name="trip_date">
             </div>
-            <span class="err">Please choose a trip option.</span>
+            <span class="err">Please choose a trip option (and add your dates, if “another date”).</span>
           </fieldset>
 
           <fieldset class="field" data-required="group">
@@ -102,31 +104,34 @@
             <span class="err">Please choose your dance level.</span>
           </fieldset>
 
-          <fieldset class="field">
+          <fieldset class="field" data-required="group">
             <legend>Have you traveled internationally for dance before?</legend>
             <div class="choices">
               <label class="choice"><input type="radio" name="dance_travel" value="Yes"><span>Yes</span></label>
               <label class="choice"><input type="radio" name="dance_travel" value="No"><span>No</span></label>
             </div>
+            <span class="err">Please choose Yes or No.</span>
           </fieldset>
 
-          <fieldset class="field">
+          <fieldset class="field" data-required="group">
             <legend>Have you been to Colombia before?</legend>
             <div class="choices">
               <label class="choice"><input type="radio" name="been_colombia" value="Yes"><span>Yes</span></label>
               <label class="choice"><input type="radio" name="been_colombia" value="No"><span>No</span></label>
             </div>
+            <span class="err">Please choose Yes or No.</span>
           </fieldset>
 
-          <fieldset class="field">
+          <fieldset class="field" data-required="group">
             <legend>Have you been to Medellín before?</legend>
             <div class="choices">
               <label class="choice"><input type="radio" name="been_medellin" value="Yes"><span>Yes</span></label>
               <label class="choice"><input type="radio" name="been_medellin" value="No"><span>No</span></label>
             </div>
+            <span class="err">Please choose Yes or No.</span>
           </fieldset>
 
-          <fieldset class="field">
+          <fieldset class="field" data-required="group">
             <legend>Is there anything that makes you hesitant about traveling to Medellín?</legend>
             <div class="choices">
               <label class="choice"><input type="radio" name="hesitant" value="Yes" data-shows="hesitant-why"><span>Yes</span></label>
@@ -136,12 +141,14 @@
               <label class="hint" for="hesitant-text">What’s on your mind?</label>
               <textarea class="input" id="hesitant-text" name="hesitant_details" style="min-height:90px"></textarea>
             </div>
+            <span class="err">Please choose Yes or No (and tell me what’s on your mind, if Yes).</span>
           </fieldset>
 
-          <div class="field">
+          <div class="field" data-required>
             <label for="hopes">What are you hoping to get out of the immersion?</label>
             <p class="hint" id="hopes-hint">No essay required — a sentence or two is plenty.</p>
-            <textarea class="input" id="hopes" name="hopes" aria-describedby="hopes-hint" style="min-height:90px"></textarea>
+            <textarea class="input" id="hopes" name="hopes" aria-describedby="hopes-hint" style="min-height:90px" required></textarea>
+            <span class="err">Please share a sentence or two.</span>
           </div>
 
           <div class="field">
@@ -166,7 +173,7 @@
           <p class="lead">Thanks for getting in touch!</p>
           <p class="measure" style="margin-inline:auto">I'll personally review your answers and follow up with the relevant trip details and next steps within 48-72 hours.</p>
           <p class="measure" style="margin-inline:auto">Once trip details are confirmed, you'll be able to decide whether you'd like to book. If you have questions—or just want to say hello—we can schedule a short call.</p>
-          <a class="btn btn--ghost" data-contact="calendar" href="#" style="margin-top:1rem">Schedule a 20-minute call</a>
+          <a class="btn btn--ghost" data-contact="calendar" href="#" style="margin-top:1rem">Book a call</a>
         </div>
       </div>
 
@@ -182,7 +189,7 @@
           <h3>Want to talk it through?</h3>
           <p>If you’d rather chat before registering, you can choose a time directly from my calendar.</p>
           <p>There’s no sales pitch and no pressure to commit. Bring whatever questions you have.</p>
-          <a class="btn btn--sm" data-contact="calendar" href="#">Schedule a 20-minute call</a>
+          <a class="btn btn--sm" data-contact="calendar" href="#">Book a call</a>
           <p class="muted" style="font-size:.82rem;margin-top:.8rem;color:var(--ink-80)">Dance in Medellín — Ask Nina Anything</p>
         </div>
 
